@@ -6,10 +6,17 @@ import java.util.Scanner;// типо как include в плюсах//
 
 public class Main {
     public static void main(String args[]) {
+
+        Scanner scanner = new Scanner(System.in);
+
         //System.out.println("Hello world!");
+
         // Ctrl + Alt + L   - выровнять код  (Hot key)
         // Ctrl + D    - копировать строку
-       /* Scanner scanner = new Scanner(System.in);
+
+       /*
+
+          // TREUGOLNIK
 
 
         double a = scanner.nextDouble();
@@ -23,8 +30,14 @@ public class Main {
         System.out.println("S = " + S);
         */
 
+
+
+        //  ДЗ ЛЕКЦИЯ 1
+
+
+        // #1
         //квадратное уравнение
-        Scanner scanner = new Scanner(System.in);
+
 
 
         /*double b = scanner.nextDouble();
@@ -47,8 +60,13 @@ public class Main {
         }*/
 
 
+        //  остальное аналогично
+
+
+
+
         //ВТОРАЯ_ЛЕКЦИЯ_DZ
-        //#1
+        // #1 (деление двух чисел)
 
         /*System.out.println("Введите делимое число " );
         double b = scanner.nextDouble();
@@ -63,20 +81,90 @@ public class Main {
         }*/
 
 
-        //#2 (Дата основания Одессы)
-       /* int x = 1794;
+        // #2 (Дата основания Одессы)
+       /* int date = 1794;
         System.out.println("В каком году была основана Одесса ? " );
-        double b = scanner.nextDouble();
-        if ( b == x )
+        int year = scanner.nextInt();
+        if ( year == date )
             System.out.println("Верно.  " );
 
         else
             System.out.println("НЕ верно. Одесса была основана в 1794 году.  " );
 
-        double c = scanner.nextDouble();
+        int date = scanner.nextInt();
         */
 
-       //3_LECTION
+       // #3 (стоимость со скидками)
+
+        /*System.out.println("Расчет стоимости товара со скидкой.  " );
+        System.out.println("Введите изначальную стоимость товара " ) ;
+
+        double cost = scanner.nextDouble();
+        double limit1 = 500;
+        double limit2 = 1000;
+
+        if (  cost < limit1 )
+            System.out.println("На данную стоимость скидка не распростроняется  ");
+
+        else if ( cost > limit1 && cost < limit2  ) {
+            System.out.println("Вам предостовляется скидка 3 % ");
+            cost = cost * 0.97;
+            System.out.println("Итоговая стоимость = " + cost);
+        }
+         else {
+             System.out.println("Вам предостовляется скидка 5 % ");
+             cost = cost * 0.95;
+             System.out.println("Итоговая стоимость = " + cost);
+         }*/
+
+
+        // #4 (проверка на четность )
+        /*System.out.println("Введите целое число и нажмите <Enter> " );
+        int a = scanner.nextInt();
+        if ((a & 1) == 0) // если число четное - его младший бит = 0
+            System.out.println("Число " + a + " четное." );
+        else
+            System.out.println("Число " + a + " не четное." );
+            */
+
+        // Можно было еще так , но хз это читабельным считается?
+        // System.out.println((а & 1) == 0 ? "чётное" : "нечётное");
+
+
+        // #5 (Делимость нацело на 3)
+       /* System.out.println("Введите целое число и нажмите <Enter> " );
+        int a = scanner.nextInt();
+        if ((a % 3) == 0)
+            System.out.println("Число " + a + " не делится нацело на 3." );
+        else
+            System.out.println("Число " + a + " делится нацело на 3." );
+        */
+
+
+
+       // почитай про STRING !!!
+       // #6 (Расчет стоимости разговора по телефону) // без String КАК СДЕЛАТЬ ОКРУГЛЕНИЕ ДО 2 ЗНАКА? к
+
+
+            System.out.println("ТАРИФ 1 минута разговора - 0.5 евриков ");
+            System.out.println("Введите целое количество минут разговора ");
+            int minuts = scanner.nextInt();
+            double cost = minuts*0.5;
+            System.out.println("Введите день недели ");
+            int day = scanner.nextInt();
+            if (day >= 6) {
+                cost = cost*0.8;
+                // round(cost*100)/100.00 так или так
+                //cost = cost.setScale(2, BigDecimal.ROUND_HALF_UP); подключить эти классы методы как?
+                System.out.println("В этот день предоставляется скидка 20 %  ");
+                System.out.println("Стоимость разговора составила " + cost + " евриков.");
+            }
+            else
+                System.out.println("Стоимость разговора составила " + cost + " евриков.");
+
+
+        // #7()
+        //3_LECTION
 
 
 
